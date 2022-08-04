@@ -1,35 +1,14 @@
 import pymongo
-client = pymongo.MongoClient("mongodb+srv://Maurya24:Amauryaa1998@cluster0.uks8ruj.mongodb.net/?retryWrites=true&w=majority")
+
+client = pymongo.MongoClient("mongodb+srv://Maurya247:Amauryaa1998@cluster0.3jjdk3k.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
-print(db)
 
-d={
-    "name" : "Ashish",
-    "email" : "mr.mauryaa@gmail.com",
-    "surname" : "maurya"
-
+data={
+    "name": "ashish",
+    "mail":"mauryaa@gmail.com",
+    "subject":"FSDS"
 }
 
-db1=client['mongotest']
-coll = db1['test']
-coll.insert_one(d)
-d={
-    "name" : "Ashish",
-    "email" : "mr.mauryaa@gmail.com",
-    "surname" : "maurya"
-
-}
-
-db1=client['mongotest']
-coll = db1['test']
-coll.insert_one(d)
-d={
-    "name" : "Ashish",
-    "email" : "mr.mauryaa@gmail.com",
-    "surname" : "maurya"
-
-}
-
-db1=client['mongotest']
-coll = db1['test']
-coll.insert_one(d)
+database = client['myinfo']
+collection=database["ashu"]
+collection.insert_one(data)
